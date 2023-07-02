@@ -125,17 +125,12 @@ const mainScrapper = async (
           ].data.media.reddit_video.fallback_url.substring(indexOfDot)}`;
 
           redditData.videoPage1[j] = {
-            url: "",
-            audio: "",
-            title: "",
-            ups: 0,
-            downs: 0,
+            url: `${childData1[i].data.media.reddit_video.fallback_url}`,
+            audio: `${audioLink}`,
+            title: childData1[i].data.title,
+            ups: childData1[i].data.ups,
+            downs: childData1[i].data.downs,
           };
-          redditData.videoPage1[
-            j
-          ].url = `${childData1[i].data.media.reddit_video.fallback_url}`;
-          redditData.videoPage1[j].audio = `${audioLink}`;
-          redditData.videoPage1[j].title = childData1[i].data.title;
 
           j++;
         } else if (!wideVideos) {
@@ -161,19 +156,12 @@ const mainScrapper = async (
           ].data.media.reddit_video.fallback_url.substring(indexOfDot)}`;
 
           redditData.videoPage1[j] = {
-            url: "",
-            audio: "",
-            title: "",
-            ups: 0,
-            downs: 0,
+            url: `${childData1[i].data.media.reddit_video.fallback_url}`,
+            audio: `${audioLink}`,
+            title: childData1[i].data.title,
+            ups: childData1[i].data.ups,
+            downs: childData1[i].data.downs,
           };
-          redditData.videoPage1[
-            j
-          ].url = `${childData1[i].data.media.reddit_video.fallback_url}`;
-          redditData.videoPage1[j].audio = `${audioLink}`;
-          redditData.videoPage1[j].title = childData1[i].data.title;
-          redditData.videoPage1[j].ups = childData1[i].data.ups;
-          redditData.videoPage1[j].downs = childData1[i].data.downs;
 
           j++;
         }
@@ -218,17 +206,12 @@ const mainScrapper = async (
             ].data.media.reddit_video.fallback_url.substring(indexOfDot)}`;
 
             redditData.videoPage2[j] = {
-              url: "",
-              audio: "",
-              title: "",
-              ups: 0,
-              downs: 0,
+              url: `${childData2[i].data.media.reddit_video.fallback_url}`,
+              audio: `${audioLink}`,
+              title: `${audioLink}`,
+              ups: childData2[i].data.ups,
+              downs: childData2[i].data.downs,
             };
-            redditData.videoPage2[
-              j
-            ].url = `${childData2[i].data.media.reddit_video.fallback_url}`;
-            redditData.videoPage2[j].audio = `${audioLink}`;
-            redditData.videoPage2[j].title = childData2[i].data.title;
 
             j++;
           } else if (!wideVideos) {
@@ -259,19 +242,12 @@ const mainScrapper = async (
             ].data.media.reddit_video.fallback_url.substring(indexOfDot)}`;
 
             redditData.videoPage2[j] = {
-              url: "",
-              audio: "",
-              title: "",
-              ups: 0,
-              downs: 0,
+              url: `${childData2[i].data.media.reddit_video.fallback_url}`,
+              audio: `${audioLink}`,
+              title: childData2[i].data.title,
+              ups: childData2[i].data.ups,
+              downs: childData2[i].data.downs,
             };
-            redditData.videoPage2[
-              j
-            ].url = `${childData2[i].data.media.reddit_video.fallback_url}`;
-            redditData.videoPage2[j].audio = `${audioLink}`;
-            redditData.videoPage2[j].title = childData2[i].data.title;
-            redditData.videoPage2[j].ups = childData2[i].data.ups;
-            redditData.videoPage2[j].downs = childData2[i].data.downs;
 
             j++;
           }
