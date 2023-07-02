@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: black;
+  }
+  
+  body,
+  html {
+    height: 100vh;
+    margin: 0;
+    color: black;
+  }
+  
+  header {
+    padding: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  form {
+  
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 600px;
+  }
+
+  #sortType-dropDown, #topSortType-dropDown {
+    width: 100%;
+    height: 2rem;
+    font-size: 18px;
+  }
+
+  #sortType-dropDown option, #topSortType-dropDown option {
+    font-size: 18px;
+  }
+
+  #topSortTypeContainer {
+    display: none;
+  }
+  
+  .input-group {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    padding: 1rem;
+  }
+  
+  label.form-label {
+    display: inline-block;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+    font-size: 18px;
+  }
+  
+  .form-btn {
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    width: 100%;
+    margin: 2rem 0 0.5rem 0;
+    background-color: rgb(5, 173, 5);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .form-btn:hover {
+    outline: 0;
+    background-color: blue;
+  }
+  
+  .form-btn:focus {
+    background-color: black;
+    box-shadow: 0 0 0 0.2rem rgb(191, 189, 189);
+  }
+  
+  #form-button-reset:hover {
+    outline: 0;
+    background-color: orange;
+  }
+  
+  #form-button-reset:focus {
+    background-color: black;
+    box-shadow: 0 0 0 0.2rem rgb(191, 189, 189);
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    height: 2rem;
+    align-self: center;
+  }
+  
+  #form-button-reset{
+    background-color: red;
+    margin-top: 0;
+  
+  }
+  
+  #output {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1200px;
+    flex: 1;
+    font-size: 24px;
+  }
+
+  #output-container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border: 1px black solid;
+    padding: 0.5rem;
+  }
+
+  #audioId {
+    padding: 0.25rem;
+  }
+  
+  #output p {
+    /* flex-direction: column; */
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 2rem;
+  }
+  
+  #output li {
+    font-size: 12px;
+    padding: 0.5rem;
+    border-bottom: 1px rgb(117, 52, 52) dotted;
+  }
+
+  #video-count{
+    text-align: center;
+  }
+
+  #user-choices{
+    text-align: center;
+
+  }
+
+  #error{
+    margin: 0 auto;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* section:hover > article .list-pairs-1 {
+    background-color: aquamarine;
+  }
+  section:hover > article .list-pairs-2 {
+    background-color: red;
+  } */
+  
+  footer {
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  

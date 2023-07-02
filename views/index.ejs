@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit</title>
+    <link type="text/css" rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Reddit Popular Videos</h1>
+        <p>Type a subreddit in, get videos out, that's it...</p>
+    </header>
+    <main>
+        <form action="/" method="post">
+
+            <container class="form-group">
+                <label for="subreddit" class="form-label">Enter subreddit:</label>
+                <container class="input-group">
+                    <input type="text" id="Ip-address" name="subreddit" class="form-control">
+                    
+                    
+                </container>
+            </container>
+
+            <container class="form-group" id="sortTypeContainer">
+                <label for="sortType" class="form-label">Select sort type:</label>
+                <select name="sortType" id="sortType-dropDown">
+                    <option value="hot">Hot</option>
+                    <option value="best">Best</option>
+                    <option value="rising">Rising</option>
+                    <option value="new">New</option>
+                    <option value="top">Top</option>
+                </select>
+            </container>
+
+            <container class="form-group" id="topSortTypeContainer">
+                <label for="topSortType" class="form-label">Select TOP sort type:</label>
+                <select name="topSortType" id="topSortType-dropDown">
+                    <option value="hour">Hour</option>
+                    <option value="day">Day</option>
+                    <option value="week">Week</option>
+                    <option value="month">Month</option>
+                    <option value="all">All-time</option>
+                </select>
+            </container>
+
+            <container class="form-group">
+                <label for="resultsAmount" class="form-label">How many results?: (1-200)</label>
+                <container class="input-group">
+                    <input type="text" id="subnet-addresses" name="resultsAmount" class="form-control">
+                </container>
+            </container>
+
+            <container class="form-group">
+                <button id="submit-button" class="form-btn" type='submit'>Submit</button>
+            </container>
+        </form>
+        <% if (!dataApi.firstLoaded){ %>
+        <p id="video-count">There were <%- dataApi.videoPage1.length+dataApi.videoPage2.length %> results from your query</p>
+        <p id="user-choices">Subreddit requested: r/<%- dataApi.userRequestData.subreddit %><br>Sorted by: <%- dataApi.userRequestData.sortType %><br>Amount of results requested: <%- dataApi.userRequestData.resultsAmount %></p>
+        <%}%>
+        
+        <section id="output">
+            
+            <% if (!dataApi.firstLoaded){ %>
+
+            <% for (let i = 0; i < dataApi.videoPage1.length; i++) {%>
+                <container id="output-container">
+                <video id="videoId" width="500" height="350" controls>
+                    <source src="<%- dataApi.videoPage1[i].url %>" type="video/mp4">
+                  </video>
+                  <audio id="audioId" controls>
+                    <source src="<%- dataApi.videoPage1[i].audio %>" type="audio/mpeg">
+                  </audio>
+                  <p><%- dataApi.videoPage1[i].title %></p>
+                  <p><%- dataApi.videoPage1[i].ups %> Upvotes</p>
+                </container>
+            <% }; %> 
+            <% for (let i = 0; i < dataApi.videoPage2.length; i++) {%>
+                <container id="output-container">
+                <video id="videoId" width="500" height="350" controls>
+                    <source src="<%- dataApi.videoPage2[i].url %>" type="video/mp4">
+                  </video>
+                  <audio id="audioId" controls>
+                    <source src="<%- dataApi.videoPage2[i].audio %>" type="audio/mpeg">
+                  </audio>
+                  <p><%- dataApi.videoPage2[i].title %></p>
+                </container>
+            <% }; %> 
+            <%};%>
+           
+        </section>
+        <section id="error"><%- dataApi.error %></section>
+    </main>
+</body>
+
+</html>
